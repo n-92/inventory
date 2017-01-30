@@ -15,7 +15,7 @@ def item_detail(request, id):
     try:
         item = Item.objects.get(id=id)
     except Item.DoesNotExist:
-        raise Http404('This item does not exist')
+        raise Http404('This item does not exist')   #this returns a 404 page
     return render(request, 'inventory_tracker/item_detail.html',{
         'item':item,
     })
