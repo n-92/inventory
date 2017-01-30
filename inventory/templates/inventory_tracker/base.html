@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 <!doctype html>
 <html>
 
@@ -5,11 +7,15 @@
         <meta charset="utf-8">
         <title>Inventory Project</title>
         <meta name="desc" content="">
+        <link rel="stylesheet" href="{% static 'main.css' %}">
     </head>
 
     <body>
         {% block content %}
         {% endblock content %}
+    <script src="{% static 'main.js' %}">
+
+    </script>
     </body>
 </html>
 
